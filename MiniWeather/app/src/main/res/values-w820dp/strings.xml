@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_text">999</string>
+    <string name="button_update_text">Force Update</string>
+    <string name="low_text_default">Low:</string>
+    <string name="high_text_default">High:</string>
+    <string name="wind_text_default">Wind:</string><string name="feel_text_default">Feel:</string><string name="text_location_default">Default Location</string><string name="text_date_default">Date</string><string name="text_forecast_default">Temps</string><string name="text_conditions_default">Conditions</string><string name="text_precip_chance">Precip</string><string name="text_wind_default"/>
+</resources>

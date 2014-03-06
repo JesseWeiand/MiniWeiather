@@ -1,0 +1,284 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.xiantos.miniWeather.MainActivity$PlaceholderFragment">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_update_text"
+        android:id="@+id/buttonUpdate"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="updateWeather" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_location_default"
+        android:id="@+id/textLocation"
+        android:textColor="@color/textColor"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/wind_text_default"
+        android:id="@+id/textWind"
+        android:textColor="@color/textColor"
+        android:layout_above="@+id/textFeel"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/buttonUpdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/feel_text_default"
+        android:id="@+id/textFeel"
+        android:textColor="@color/textColor"
+        android:layout_alignBaseline="@+id/textCurTemp"
+        android:layout_alignBottom="@+id/textCurTemp"
+        android:layout_toRightOf="@+id/textLocation"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignEnd="@+id/textWind"
+        android:layout_alignLeft="@+id/textWind"
+        android:layout_alignStart="@+id/textWind" />
+
+
+    <TextView
+        android:gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/main_text"
+        android:id="@+id/textCurTemp"
+        android:textSize="@dimen/main_temp_text"
+        android:textColor="@color/textColor"
+        android:layout_below="@+id/textLocation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp"
+        android:layout_alignRight="@+id/buttonUpdate"
+        android:layout_alignEnd="@+id/buttonUpdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/text_date_default"
+        android:id="@+id/textDate1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:layout_alignRight="@+id/textTemp1"
+        android:layout_alignEnd="@+id/textTemp1"
+        android:minWidth="@dimen/min_date_width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/text_date_default"
+        android:id="@+id/textDate2"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textTemp2"
+        android:layout_alignEnd="@+id/textDate2"
+        android:layout_alignLeft="@+id/textTemp2"
+        android:layout_alignStart="@+id/textDate2"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:minWidth="@dimen/min_date_width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/text_date_default"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/textTemp3"
+        android:layout_alignStart="@+id/textDate3"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:id="@+id/textDate3"
+        android:minWidth="@dimen/min_date_width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/text_forecast_default"
+        android:id="@+id/textTemp2"
+        android:layout_below="@+id/textDate2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/text_forecast_default"
+        android:id="@+id/textTemp1"
+        android:layout_alignTop="@+id/textTemp2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/text_forecast_default"
+        android:id="@+id/textTemp3"
+        android:layout_alignTop="@+id/textTemp2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_conditions_default"
+        android:id="@+id/textCond1"
+        android:layout_below="@+id/textTemp1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textTemp1"
+        android:layout_alignEnd="@+id/textTemp1"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_conditions_default"
+        android:id="@+id/textCond2"
+        android:layout_below="@+id/textTemp2"
+        android:layout_alignLeft="@+id/textTemp2"
+        android:layout_alignStart="@+id/textTemp2"
+        android:layout_alignRight="@+id/textTemp2"
+        android:layout_alignEnd="@+id/textTemp2"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_conditions_default"
+        android:id="@+id/textCond3"
+        android:layout_below="@+id/textTemp3"
+        android:layout_alignRight="@+id/textTemp3"
+        android:layout_alignEnd="@+id/textTemp3"
+        android:layout_alignLeft="@+id/textTemp3"
+        android:layout_alignStart="@+id/textTemp3"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:maxLines="2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_precip_chance"
+        android:id="@+id/textPrecip1"
+        android:layout_below="@+id/textCond1"
+        android:layout_alignRight="@+id/textCond1"
+        android:layout_alignEnd="@+id/textCond1"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_wind_default"
+        android:id="@+id/textWind1"
+        android:layout_below="@+id/textPrecip1"
+        android:layout_alignRight="@+id/textPrecip1"
+        android:layout_alignEnd="@+id/textPrecip1"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_precip_chance"
+        android:id="@+id/textPrecip2"
+        android:layout_alignTop="@+id/textPrecip1"
+        android:layout_alignRight="@+id/textCond2"
+        android:layout_alignEnd="@+id/textCond2"
+        android:layout_alignLeft="@+id/textCond2"
+        android:layout_alignStart="@+id/textCond2"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_wind_default"
+        android:id="@+id/textWind2"
+        android:layout_alignTop="@+id/textWind1"
+        android:layout_alignRight="@+id/textPrecip2"
+        android:layout_alignEnd="@+id/textPrecip2"
+        android:layout_alignLeft="@+id/textPrecip2"
+        android:layout_alignStart="@+id/textPrecip2"
+        android:gravity="center"
+        android:textColor="@color/textColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_precip_chance"
+        android:id="@+id/textPrecip3"
+        android:layout_alignTop="@+id/textPrecip2"
+        android:layout_alignLeft="@+id/textCond3"
+        android:layout_alignStart="@+id/textCond3"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:layout_alignRight="@+id/textCond3"
+        android:layout_alignEnd="@+id/textCond3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/text_wind_default"
+        android:id="@+id/textWind3"
+        android:layout_alignTop="@+id/textWind2"
+        android:layout_alignLeft="@+id/textPrecip3"
+        android:layout_alignStart="@+id/textPrecip3"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
